@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pacientes</title>
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body>
+<header>
+    <h1>Gestión de Pacientes</h1>
+    <a href="home.html" class="btn">Volver al Inicio</a>
+</header>
+
+<main>
+    <div class="form-container">
+        <form id="formRegistrarPaciente">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="number" id="dni" placeholder="DNI" required>
+            <label for="fechaIngreso">Fecha de Ingreso:</label>
+            <input type="date" id="fechaIngreso" required>
+
+            <h3>Domicilio</h3>
+            <input type="text" id="calle" placeholder="Calle" required>
+            <input type="number" id="numero" placeholder="Número" required>
+            <input type="text" id="localidad" placeholder="Localidad" required>
+            <input type="text" id="provincia" placeholder="Provincia" required>
+
+            <button type="submit">Registrar Paciente</button>
+        </form>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="buscarPaciente" placeholder="Buscar por ID">
+        <button id="btnBuscarPaciente">Buscar</button>
+        <button id="btnEditarPaciente">Editar</button>
+    </div>
+
+    <!-- Contenedor con scroll para la tabla -->
+    <div class="table-container">
+        <table id="listaPacientes">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Fecha de Ingreso</th>
+                <th>Domicilio</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</main>
+
+<script type="module" src="assets/js/modules/pacientes.js"></script>
+</body>
+</html>

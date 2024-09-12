@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+<header>
+    <h1>Gestión de Turnos</h1>
+    <a href="home.html" class="btn">Volver al Inicio</a>
+</header>
+
+<div class="form-container">
+    <form id="formRegistrarTurno">
+        <input type="number" id="pacienteId" placeholder="ID Paciente" required>
+        <input type="number" id="odontologoId" placeholder="ID Odontólogo" required>
+        <input type="date" id="fechaTurno" required>
+        <button type="submit">Registrar Turno</button>
+    </form>
+</div>
+
+<div class="search-container">
+    <input type="text" id="buscarTurno" placeholder="Buscar por ID">
+    <button id="btnBuscarTurno">Buscar</button>
+    <button id="btnEditarTurno">Editar</button>
+</div>
+
+<table id="listaTurnos">
+    <thead>
+    <tr>
+        <th>Paciente</th>
+        <th>Odontólogo</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<script type="module" src="assets/js/modules/turnos.js"></script>
+</body>
+</html>
